@@ -1,0 +1,12 @@
+- title: About
+  url: /about/index.html
+- title: Contact
+  url: /contact/index.html
+- title: Categories
+  sublinks:
+    - title: Algorithms
+      sublinks:
+        - title: DS Chen
+          url: /algorithms-arcade/ds-review-1-chenyue/contents.html
+        - title: DS Deng
+          url: /algorithms-arcade/ds-review-2-deng/contents.html

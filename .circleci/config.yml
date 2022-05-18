@@ -1,0 +1,30 @@
+version: 2
+jobs:
+
+  deploy-gh-pages:
+    machine:
+        enabled: true
+
+    working_directory: ~/algorithms
+
+    steps:
+      - checkout
+
+      - run:
+          name: Submodules update
+          command: git submodule update --init --recursive
+
+      - run:
+          name: Deploy Github Pages
+          command: ./scripts/deploy-ghpages.sh .
+
+
+workflows:
+  version: 2
+
+  build-deploy:
+    jobs:
+      - deploy-gh-pages:
+          filters:
+            branches:
+              only: master
